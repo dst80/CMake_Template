@@ -1,0 +1,22 @@
+﻿---
+BasedOnStyle: Microsoft
+AccessModifierOffset: '-4'
+AlignAfterOpenBracket: AlwaysBreak
+AlignTrailingComments: 'true'
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: 'false'
+AlwaysBreakTemplateDeclarations: 'Yes'
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+ColumnLimit: 140
+ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
+FixNamespaceComments: 'true'
+IncludeBlocks: Regroup
+KeepEmptyLinesAtTheStartOfBlocks: 'false'
+PointerAlignment: Left
+SortUsingDeclarations: 'false'
+Standard: Cpp11
+
+...
