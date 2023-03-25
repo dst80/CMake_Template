@@ -1,0 +1,76 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "cacheVariables": {},
+            "binaryDir": "${sourceDir}/build/${presetName}"
+        },
+        {
+            "name": "windows-base",
+            "hidden": true,
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_SYSTEM_VERSION": "10.0.19041.0"
+            }
+        },
+        {
+            "name": "windows-ninja-clang",
+            "displayName": "windows-ninja-clang",
+            "inherits": "windows-base",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            },
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": [
+                        "Windows"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "linux-base",
+            "hidden": true,
+            "inherits": "base"
+        },
+        {
+            "name": "linux-ninja-clang",
+            "inherits": "linux-base",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "windows-ninja-clang-release",
+            "displayName": "Release",
+            "configurePreset": "windows-ninja-clang",
+            "configuration": "Release"
+        },
+        {
+            "name": "windows-ninja-clang-debug",
+            "displayName": "Debug",
+            "configurePreset": "windows-ninja-clang",
+            "configuration": "Debug"
+        },
+        {
+            "name": "linux-ninja-clang-release",
+            "displayName": "Release",
+            "configurePreset": "linux-ninja-clang",
+            "configuration": "Release"
+        },
+        {
+            "name": "linux-ninja-clang-debug",
+            "displayName": "Debug",
+            "configurePreset": "linux-ninja-clang",
+            "configuration": "Debug"
+        }
+    ]
+}
