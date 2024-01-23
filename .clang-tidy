@@ -1,9 +1,8 @@
 Checks:          'clang-diagnostic-*, clang-analyzer-cplusplus*, abseil-*, cppcoreguidelines-*, google-*, performance-*, readability-*'
 WarningsAsErrors: ''
-HeaderFilterRegex: ''
+HeaderFilterRegex: '.*'
 AnalyzeTemporaryDtors: false
 FormatStyle:     file
-User:            Dennis
 CheckOptions:
   - key:    abseil-string-find-startswith.AbseilStringsMatchHeader
     value:  'absl/strings/match.h'
@@ -155,10 +154,6 @@ CheckOptions:
 # Naming
   - key:    readability-identifier-naming.NamespaceCase
     value:  'CamelCase'
-  - key:    readability-identifier-naming.AbstractClassCase
-    value:  'CamelCase'
-  - key:    readability-identifier-naming.AbstractClassPrefix
-    value:  'I'
   - key:    readability-identifier-naming.ClassCase
     value:  'CamelCase'
   - key:    readability-identifier-naming.StructCase
@@ -166,17 +161,21 @@ CheckOptions:
   - key:    readability-identifier-naming.UnionCase
     value:  'CamelCase'
   - key:    readability-identifier-naming.MethodCase
-    value:  'CamelCase'
+    value:  'camelBack'
   - key:    readability-identifier-naming.FunctionCase
-    value:  'CamelCase'
+    value:  'camelBack'
   - key:    readability-identifier-naming.ParameterCase
     value:  'camelBack'
+  - key:    readability-identifier-naming.ParameterIgnoredRegexp
+    value: '\w{1,2}'
   - key:    readability-identifier-naming.LocalVariableCase
     value:  'camelBack'
+  - key:    readability-identifier-naming.LocalVariableIgnoredRegexp
+    value: '\w{1,2}'
   - key:    readability-identifier-naming.ClassMemberCase
-    value:  'CamelCase'
+    value:  'camelBack'
   - key:    readability-identifier-naming.ClassMemberPrefix
-    value:  'm_'
+    value:  '_'
   - key:    readability-identifier-naming.PublicMemberCase
     value:  'CamelCase'
   - key:    readability-identifier-naming.ConstantMemberCase

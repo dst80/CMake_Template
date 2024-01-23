@@ -1,22 +1,20 @@
 ﻿---
+# file requires clang format 14.0 or higher
 BasedOnStyle: Microsoft
-AccessModifierOffset: '-4'
-AlignAfterOpenBracket: AlwaysBreak
-AlignTrailingComments: 'true'
-AllowShortFunctionsOnASingleLine: Inline
-AllowShortIfStatementsOnASingleLine: Never
-AllowShortLambdasOnASingleLine: Inline
-AllowShortLoopsOnASingleLine: 'false'
-AlwaysBreakTemplateDeclarations: 'Yes'
-BreakConstructorInitializers: BeforeColon
-BreakInheritanceList: BeforeColon
+Cpp11BracedListStyle: true
+AccessModifierOffset: -4
+AlignArrayOfStructures: Right
+AlignAfterOpenBracket: BlockIndent
+AllowAllParametersOfDeclarationOnNextLine : false
+AlwaysBreakAfterReturnType : None
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
 ColumnLimit: 140
-ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
-FixNamespaceComments: 'true'
-IncludeBlocks: Regroup
-KeepEmptyLinesAtTheStartOfBlocks: 'false'
+PackConstructorInitializers: Never
 PointerAlignment: Left
-SortUsingDeclarations: 'false'
-Standard: Cpp11
-
+BraceWrapping:
+    SplitEmptyFunction: false
+    SplitEmptyRecord: false
+    SplitEmptyNamespace: true
 ...
